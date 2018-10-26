@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="softweb.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="softweb.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyAQjh2r1r069Qk6K7TEaKnsea88liCtr2c",
+      authDomain: "softwire-jakazen.firebaseapp.com",
+      databaseURL: "https://softwire-jakazen.firebaseio.com",
+      projectId: "softwire-jakazen",
+      storageBucket: "softwire-jakazen.appspot.com",
+      messagingSenderId: "418739497362"
+    };
+    firebase.initializeApp(config)
+
+    const firestore = firebase.firestore();
+    const settings = {/* your settings... */ timestampsInSnapshots: true};
+    firestore.settings(settings);
+  </script>
+</head>
+
+<body class="body">
+  <div class="container-fluid">
+    <div class="jumbtron">
+      <div class="row">
+        <div class="col-xs-10">
+              <h1>Tech Trivia</h1>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<div class="inner-container">
+    Name: <input id="nameInput" type="text"></input>
+    <button class="quiz-button" onclick="saveScore()">Save score</button><br/>
+    <button onclick="showScores()">Show scores</button>
+    <span id="scores">on the console</span>
+    </div>
+
+<h5>For anything, follow me on:</h5>
+  <a href="mailto:elementalabsorber@gmail.com" class="fa fa-google"></a>
+  <a href="https://www.linkedin.com/in/jakadin/" class="fa fa-linkedin"></a>
+</div>
+</div>
+</div>
+</div>
+</body>
