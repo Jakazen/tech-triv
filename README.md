@@ -1,1 +1,1 @@
-# tech-triv
+# A trivia of tech questions 
